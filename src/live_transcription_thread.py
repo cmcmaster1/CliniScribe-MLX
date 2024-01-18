@@ -3,15 +3,17 @@ import numpy as np
 import pyaudio
 from PyQt5.QtCore import QThread, pyqtSignal
 from whisper import transcribe
+import os
+from config import WHISPER_DIR
 
 class LiveTranscriptionThread(QThread):
     signal = pyqtSignal('PyQt_PyObject')
 
-    def __init__(self, sample_rate=16000, buffer_size=16000, whisper_path = "../models/whisper_base_en"):
+    def __init__(self, sample_rate, buffer_size):
         QThread.__init__(self)
         self.sample_rate = sample_rate
         self.buffer_size = buffer_size
-        self.whisper_path = whisper_path
+        self.whisper_path = os.path.join(os.path.dirname(os.getcwd()), 'models', WHISPER_DIR)
         self.p = pyaudio.PyAudio()
         self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,

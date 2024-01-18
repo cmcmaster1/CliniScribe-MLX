@@ -6,9 +6,10 @@ from mlx_lm import load, generate
 from threading import Thread
 import os
 from tqdm import tqdm
-tqdm(disable=True, total=0)
-
 from whisper import transcribe
+from config import WHISPER_DIR, SAMPLE_RATE
+
+tqdm(disable=True, total=0)
 
 class App(QWidget):
     def __init__(self, session_id, patient_id, buffer_size, chunk_size, auto_summarize):
@@ -19,7 +20,7 @@ class App(QWidget):
         self.session_id = session_id
         self.patient_id = patient_id
         self.auto_summarize = auto_summarize
-        self.whisper_path = os.path.join(os.path.dirname(os.getcwd()), 'models/whisper_base_en')
+        self.whisper_path = os.path.join(os.path.dirname(os.getcwd()), 'models', WHISPER_DIR)
 
         # Add session name to the title
         self.setWindowTitle(f"Transcription - {self.session_id}")
@@ -65,7 +66,7 @@ class App(QWidget):
         self.word_cache = []
         self.summaries = []
 
-        self.transcriptionThread = LiveTranscriptionThread(sample_rate=16000, buffer_size=self.buffer_size)
+        self.transcriptionThread = LiveTranscriptionThread(sample_rate=SAMPLE_RATE, buffer_size=self.buffer_size)
 
 
     def load_model(self):
