@@ -1,7 +1,8 @@
+<img src="media/logo.png" width="200" height="200">
 
-# PyQt Transcription Application
+# PyQt Transcription with MLX
 
-This application provides a GUI for live audio transcription and session management.
+This application provides a GUI for live audio transcription and session management using MLX on MacOS.
 
 ## Setup and Installation
 
@@ -11,7 +12,8 @@ This application provides a GUI for live audio transcription and session managem
 
 ## Features
 
-- Live audio transcription.
+- (Semi-)Live audio transcription.
 - Session management with SQLite database.
 - Text summarization.
-
+- Barely functional.
+- Reassuringly ugly.
