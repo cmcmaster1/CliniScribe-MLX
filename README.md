@@ -11,6 +11,7 @@ This application provides a GUI for live audio transcription and session managem
 3. Download and place one of the MLX Whisper models in the models directory ([models on the hub](https://huggingface.co/models?search=mlx%20whisper))
 4. Change config.py to reflect the directory of the Whisper model wihtin the models fodler
 5. Run `main.py` inside the `src` directory.
+6. (Optional): change the LLM in config.py (currently using mlx-community/Mistral-7B-Instruct-v0.2-4bit-mlx, which will be automatically downloaded the first time you run the app)
 
 ## Features
 
