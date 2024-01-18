@@ -8,7 +8,9 @@ This application provides a GUI for live audio transcription and session managem
 
 1. Clone the repository.
 2. Install the required packages: `pip install -r requirements.txt`.
-3. Run `main.py` inside the `src` directory.
+3. Download and place one of the MLX Whisper models in the models directory ([models on the hub](https://huggingface.co/models?search=mlx%20whisper))
+4. Change config.py to reflect the directory of the Whisper model wihtin the models fodler
+5. Run `main.py` inside the `src` directory.
 
 ## Features
 
