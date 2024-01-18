@@ -7,7 +7,7 @@ from threading import Thread
 import os
 from tqdm import tqdm
 from whisper import transcribe
-from config import WHISPER_DIR, SAMPLE_RATE
+from config import WHISPER_DIR, SAMPLE_RATE, LLM
 
 tqdm(disable=True, total=0)
 
@@ -71,7 +71,7 @@ class App(QWidget):
 
     def load_model(self):
         # Load the model and tokenizer
-        self.model, self.tokenizer = load("mlx-community/Mistral-7B-Instruct-v0.2-4bit-mlx")
+        self.model, self.tokenizer = load(LLM)
         # Hide the loading label once the model is loaded
         self.loadingLabel.hide()
 
