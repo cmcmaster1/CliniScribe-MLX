@@ -1,0 +1,14 @@
+
+PyQt5
+numpy
+pyaudio
+mlx
+mlx_lm
+numba
+numpy
+torch
+tqdm
+more-itertools
+tiktoken==0.3.3
+huggingface_hub
+scipy
