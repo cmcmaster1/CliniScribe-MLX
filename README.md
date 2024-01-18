@@ -17,3 +17,8 @@ This application provides a GUI for live audio transcription and session managem
 - Text summarization.
 - Barely functional.
 - Reassuringly ugly.
+
+## Acknowledgements
+
+* MLX (https://github.com/ml-explore/mlx)
+* The Whisper implementation is a straight up copy from the MLX Examples repo (https://github.com/ml-explore/mlx-examples) - I haven't even bother to just take what I need at this stage (TODO: trim code from the whisper folder)
